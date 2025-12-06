@@ -40,8 +40,7 @@ if __name__ == "__main__":
     parser.add_argument(
             "-t","--target",
             type=str,
-            help="Enter the ip/web address of the target",
-            required=True
+            help="Enter the ip/web address of the target"
             )
     
     parser.add_argument(
@@ -86,8 +85,6 @@ if __name__ == "__main__":
     filename = args.filename
     
     res = []
-
-    print(Fore.CYAN + f"Grabbing banner of {target}:{port}")
 
     banner = Banner(target,port,timeout)
     banner.grab_banner(res)
